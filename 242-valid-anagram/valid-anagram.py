@@ -1,8 +1,7 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        n, m = len(s), len(t)
         HM = {}
-        if n != m:
+        if len(s) != len(t):
             return False
         for char in s:
             HM[char] = HM.get(char, 0) + 1
